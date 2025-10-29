@@ -1,0 +1,101 @@
+{
+  "projects": [
+    {
+      "id": "LinkedIn Hiring Signal Intelligence",
+      "title": "LinkedIn Hiring Signal Intelligence",
+      "year": "2025",
+      "description": "Automated system that finds companies actively hiring, enriches contact data, and runs personalized outreach campaigns across email and LinkedIn—generating qualified leads while you sleep.",
+      "longDescription": "A complete lead generation and outreach automation built with n8n that turns LinkedIn job postings into qualified sales opportunities. The system starts by identifying companies hiring for specific roles (a strong buying signal), then automatically finds decision-makers, validates their email addresses, and crafts AI-personalized messages based on their company's website. It manages intelligent follow-up sequences that adapt based on whether prospects are active on LinkedIn or prefer email, analyzes reply sentiment to prioritize hot leads, and sends real-time Slack notifications when someone shows interest. Everything syncs to Google Sheets for full visibility, and interested prospects automatically receive calendar booking links—turning cold outreach into warm conversations without any manual work.",
+      "technologies": ["n8n",
+        "Apify",
+        "Prospeo",
+        "OpenAI API",
+        "Smartlead",
+        "HeyReach",
+        "Google Sheets",
+        "Slack"],
+      "image": "/placeholder.svg?height=300&width=400",
+      "gallery": [
+        "/linkedin1.png?height=400&width=600",
+        "/linked--2?height=400&width=600",
+        "/linked-3?height=400&width=600",
+        "/linked-3?height=400&width=600"
+      ],
+      "features": [
+        "Scrapes LinkedIn job postings to find companies with active budgets",
+        "Validates and enriches contact information (75%+ email find rate)",
+        "AI-generated personalized icebreakers using OpenAI (references company news/achievements)",
+        "Smart channel routing (sends LinkedIn messages to active users, emails to inactive ones)",
+        "Multi-stage follow-up sequences (Day 3 and Day 7 automatically)",
+        "Reply sentiment analysis (flags positive responses for immediate action)",
+        "Real-time Slack alerts for hot leads with interested prospects",
+        "Automatic calendar link delivery to book meetings instantly",
+        "Complete tracking dashboard in Google Sheets"
+      ],
+      "results": "Generates 20+ qualified B2B leads monthly. Saves 25+ hours per week by eliminating manual prospecting, email hunting, and follow-up tracking. Clients typically see first meetings booked within 72 hours of launch."
+    },
+    {
+      "id": "telegram-media-scraper",
+      "title": "Telegram Media Scraper",
+      "year": "2024",
+      "description": "Advanced media extraction tool for Telegram channels, enabling bulk download and organization of images, videos, and documents.",
+      "longDescription": "A sophisticated Python application using the Telethon library to extract media content from Telegram channels and groups. The tool handles authentication, media filtering, and batch processing while maintaining data integrity and respecting rate limits.",
+      "technologies": ["Python", "Telethon", "JSON", "AsyncIO", "SQLite"],
+      "image": "/placeholder.svg?height=300&width=400",
+      "gallery": [
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600"
+      ],
+      "features": [
+        "Bulk media download",
+        "Channel authentication handling",
+        "Media type filtering",
+        "Progress tracking and logging"
+      ],
+      "results": "Processed over 10,000 media files for content creators and researchers"
+    },
+    {
+      "id": "job-board-scraper",
+      "title": "Demo Job Board Scraper",
+      "year": "2024",
+      "description": "Comprehensive job listing aggregator that collects opportunities from multiple job boards, providing a unified view of the job market.",
+      "longDescription": "A robust web scraping system built with Playwright and JavaScript that aggregates job listings from various job boards. The scraper handles dynamic content loading, form submissions, and data normalization to provide consistent job data across different sources.",
+      "technologies": ["Playwright", "JavaScript", "CSV", "Node.js", "Cheerio"],
+      "image": "/placeholder.svg?height=300&width=400",
+      "gallery": [
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600"
+      ],
+      "features": [
+        "Multi-site job aggregation",
+        "Dynamic content handling",
+        "Data deduplication",
+        "Automated scheduling"
+      ],
+      "results": "Aggregated 50,000+ job listings monthly for recruitment agencies"
+    },
+    {
+      "id": "ecommerce-inventory-tracker",
+      "title": "E-commerce Inventory Tracker",
+      "year": "2024",
+      "description": "Real-time inventory monitoring system for e-commerce platforms, tracking stock levels and price changes across multiple marketplaces.",
+      "longDescription": "An intelligent monitoring system that tracks product availability and pricing across major e-commerce platforms. Built with Python and advanced scraping techniques to handle anti-bot measures while providing real-time alerts for inventory changes.",
+      "technologies": ["Python", "Selenium", "Redis", "PostgreSQL", "FastAPI"],
+      "image": "/placeholder.svg?height=300&width=400",
+      "gallery": [
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600"
+      ],
+      "features": [
+        "Multi-platform monitoring",
+        "Real-time stock alerts",
+        "Price change tracking",
+        "Automated restocking notifications"
+      ],
+      "results": "Reduced stockouts by 60% for e-commerce clients through proactive monitoring"
+    }
+  ]
+}
