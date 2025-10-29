@@ -1,5 +1,5 @@
 "use client"
-
+import React from 'react'
 import { ArrowDown, Code, Database, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
@@ -12,14 +12,18 @@ export default function Hero() {
     }
   }
 
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted opacity-50" />
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fillRule=%22evenodd%22%3E%3Cg fill=%22%234ea8de%22 fillOpacity=%220.05%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
+  const svgBackground = "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234ea8de'fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")"
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+  return (
+    <section id="home" className="min-h-[70vh] flex flex-col relative">
+      {/* Background Pattern */}
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{ backgroundImage: svgBackground }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 relative z-0">
+        <div className="grid lg:grid-cols-2 gap-8">
           {/* Left Column - Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -28,22 +32,23 @@ export default function Hero() {
             className="text-center lg:text-left"
           >
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold font-poppins text-foreground mb-6 text-balance"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold font-poppins text-foreground mb-6"
             >
-              Automate Your Data,{" "}
-              <span className="text-primary">Grow Your Business</span>
+              Stop Chasing Leads.{" "}
+              <span className="text-[#FF6B6B]">Start Capturing Them Automatically.</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 text-pretty"
+              className="text-base sm:text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              Freelance web scraping and automation specialist helping businesses save time, reduce costs, and unlock valuable insights through intelligent data solutions.
+              I build custom lead generation systems and automation that work 24/7—so you get more qualified prospects, 
+              eliminate manual busywork, and scale without burning out your team.
             </motion.p>
 
             <motion.div
@@ -53,20 +58,20 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <Button
-                onClick={scrollToProjects}
+                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 animate-glow"
               >
-                View My Projects
+                Get Your Free Automation Plan
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={scrollToProjects}
                 className="border-accent text-accent hover:bg-accent hover:text-accent-foreground font-semibold px-8 py-3"
               >
-                Get In Touch
+                See What's Possible
               </Button>
             </motion.div>
 
@@ -78,16 +83,16 @@ export default function Hero() {
               className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-border"
             >
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-primary font-poppins">50+</div>
-                <div className="text-sm text-muted-foreground">Projects Completed</div>
+                <div className="text-2xl font-bold text-primary font-poppins">$2.4M+</div>
+                <div className="text-sm text-muted-foreground">Revenue Generated</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-primary font-poppins">99%</div>
-                <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+                <div className="text-2xl font-bold text-primary font-poppins">10K+</div>
+                <div className="text-sm text-muted-foreground">Leads Captured</div>
               </div>
               <div className="text-center lg:text-left">
                 <div className="text-2xl font-bold text-primary font-poppins">24/7</div>
-                <div className="text-sm text-muted-foreground">Data Processing</div>
+                <div className="text-sm text-muted-foreground">Always Working</div>
               </div>
             </motion.div>
           </motion.div>
@@ -97,20 +102,18 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative flex items-center justify-center"
+            className="hidden lg:flex items-center justify-center"
           >
-            <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-              {/* Central Hub */}
+            <div className="relative w-80 h-80">
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-                className="absolute inset-0 border-2 border-accent/30 rounded-full"
+                className="absolute inset-0 border-2 border-[#4EA8DE]/30 rounded-full"
               />
-              
-              <div className="absolute inset-8 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+              <div className="absolute inset-8 bg-gradient-to-br from-[#FF6B6B]/20 to-[#4EA8DE]/20 rounded-full flex items-center justify-center backdrop-blur-sm">
                 <div className="text-center">
-                  <Database className="h-12 w-12 text-primary mx-auto mb-2 animate-float" />
-                  <div className="text-sm font-semibold text-foreground">Data Hub</div>
+                  <Database className="h-12 w-12 text-[#FF6B6B] mx-auto mb-2 animate-float" />
+                  <div className="text-sm font-semibold text-foreground">Lead Engine</div>
                 </div>
               </div>
 
@@ -171,24 +174,24 @@ export default function Hero() {
             </div>
           </motion.div>
         </div>
-      </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
+        {/* Scroll Indicator */}
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-          className="text-muted-foreground cursor-pointer"
-          onClick={scrollToProjects}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.5 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
-          <ArrowDown className="h-6 w-6" />
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+            className="text-muted-foreground cursor-pointer"
+            onClick={scrollToProjects}
+          >
+            <ArrowDown className="h-6 w-6" />
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   )
 }

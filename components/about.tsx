@@ -10,18 +10,18 @@ export default function About() {
   const achievements = [
     {
       icon: Award,
-      title: "Certified Expert",
-      description: "Python & Web Scraping Specialist",
+      title: "Proven Track Record",
+      description: "50+ businesses automated successfully",
     },
     {
       icon: Clock,
-      title: "Fast Delivery",
-      description: "Average 48-hour turnaround",
+      title: "Rapid Deployment",
+      description: "Systems live within 48-72 hours",
     },
     {
       icon: Users,
-      title: "Happy Clients",
-      description: "50+ successful projects delivered",
+      title: "Revenue Impact",
+      description: "Average 3x ROI within 6 months",
     },
   ]
 
@@ -40,10 +40,12 @@ export default function About() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-foreground mb-4">About Me</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-foreground mb-4">
+            Your Growth Partner, Not Just a Developer
+          </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Passionate about turning complex data challenges into simple, automated solutions that drive business
-            growth.
+            I build lead generation machines and automation systems that work while you sleep—so you can focus on 
+            closing deals, not chasing them.
           </p>
         </motion.div>
 
@@ -69,7 +71,7 @@ export default function About() {
                   />
                   <div className="text-center">
                     <h3 className="text-xl font-semibold font-poppins text-foreground mb-2">John Pacman</h3>
-                    <p className="text-accent font-medium mb-4">Web Scraping & Automation Expert</p>
+                    <p className="text-accent font-medium mb-4">Lead Generation & Automation Specialist</p>
                     <Button
                       onClick={downloadResume}
                       variant="outline"
@@ -116,25 +118,25 @@ export default function About() {
           >
             <div>
               <h3 className="text-2xl font-semibold font-poppins text-foreground mb-4">
-                Freelance Developer Specializing in Web Scraping and Automation
+                I Turn Manual Tasks Into Money-Making Machines
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                With over 5 years of experience in web scraping and automation, I help businesses save time and unlock
-                valuable insights from web data. My expertise spans from simple data extraction tasks to complex
-                automation workflows that can transform how your business operates.
+                For 5+ years, I've helped businesses escape the cycle of manual lead hunting and repetitive tasks. 
+                My custom automation systems don't just save time—they capture opportunities you're currently missing, 
+                qualify leads automatically, and feed your sales pipeline 24/7 without adding headcount.
               </p>
             </div>
 
             <div className="space-y-4">
               <div>
-                <h4 className="text-lg font-semibold font-poppins text-foreground mb-2">What I Do</h4>
+                <h4 className="text-lg font-semibold font-poppins text-foreground mb-2">What You Get</h4>
                 <ul className="space-y-2">
                   {[
-                    "Custom web scraping solutions for any website",
-                    "Automated data collection and processing pipelines",
-                    "API integrations and data synchronization",
-                    "Business process automation using Python and JavaScript",
-                    "Data cleaning, transformation, and analysis",
+                    "Lead generation systems that find and qualify prospects automatically",
+                    "Business automation that eliminates hours of daily grunt work",
+                    "Data pipelines that keep your CRM fresh and your team productive",
+                    "Custom integrations between your tools (no more copy-pasting)",
+                    "Intelligent scrapers that extract exactly what you need from any source",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0" />
@@ -145,11 +147,12 @@ export default function About() {
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold font-poppins text-foreground mb-2">Why Choose Me</h4>
+                <h4 className="text-lg font-semibold font-poppins text-foreground mb-2">How I'm Different</h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  I believe in delivering not just code, but complete solutions that solve real business problems. Every
-                  project comes with comprehensive documentation, ongoing support, and the flexibility to adapt as your
-                  needs evolve. My goal is to become your trusted partner in data automation.
+                  I don't just write code and disappear. Every solution comes with clear documentation your team 
+                  can actually use, training so you're never dependent on me, and 30 days of post-launch support. 
+                  You'll know exactly how it works, what it costs, and what results to expect—no surprises, 
+                  no technical jargon, just systems that make you money.
                 </p>
               </div>
             </div>
@@ -159,14 +162,14 @@ export default function About() {
                 onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
                 className="bg-primary hover:bg-primary/90 text-primary-foreground"
               >
-                Start a Project
+                Get Your Free Consultation
               </Button>
               <Button
                 variant="outline"
                 onClick={() => document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" })}
                 className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
               >
-                View My Work
+                See Real Results
               </Button>
             </div>
           </motion.div>

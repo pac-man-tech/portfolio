@@ -11,13 +11,19 @@ export default function Footer() {
 
   const quickLinks = [
     { href: "#home", label: "Home" },
+    { href: "#services", label: "Services" },
     { href: "#projects", label: "Projects" },
     { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
   ]
 
-  const services = ["Web Scraping", "Data Automation", "API Integration", "Process Automation", "Data Analysis"]
+  const services = [
+    "Lead Generation Systems",
+    "Workflow Automation (n8n)",
+    "Admin Task Elimination",
+    "Web Scraping Solutions",
+    "CRM Integrations"
+  ]
 
   const socialLinks = [
     {
@@ -59,8 +65,8 @@ export default function Footer() {
               <div className="mb-4">
                 <h3 className="text-2xl font-bold font-poppins text-primary mb-2">Pacman Tech Solutions</h3>
                 <p className="text-muted-foreground leading-relaxed max-w-md">
-                  Specializing in web scraping and automation solutions that help businesses save time, reduce costs,
-                  and unlock valuable data insights.
+                  Building lead generation machines and automation systems that capture opportunities 24/7—so you can 
+                  focus on growth, not grunt work.
                 </p>
               </div>
 
@@ -140,7 +146,7 @@ export default function Footer() {
             >
               <span>© 2025 Pacman Tech Solutions. Made with</span>
               <Heart className="h-4 w-4 text-primary mx-1 fill-current" />
-              <span>for automation enthusiasts.</span>
+              <span>for growth-focused businesses.</span>
             </motion.div>
 
             <motion.div
@@ -150,7 +156,7 @@ export default function Footer() {
               viewport={{ once: true }}
               className="flex items-center space-x-4"
             >
-              <span className="text-sm text-muted-foreground">Available for freelance work</span>
+              <span className="text-sm text-muted-foreground">Taking new clients</span>
               <Button
                 onClick={scrollToTop}
                 variant="outline"

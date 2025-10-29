@@ -1,20 +1,20 @@
 {
   "projects": [
     {
-      "id": "LinkedIn Hiring Signal Intelligence",
+      "id": "linkedin-job-signal-intelligence",
       "title": "LinkedIn Hiring Signal Intelligence",
       "year": "2025",
       "description": "Automated system that finds companies actively hiring, enriches contact data, and runs personalized outreach campaigns across email and LinkedIn—generating qualified leads while you sleep.",
-      "longDescription": "A complete lead generation and outreach automation built with n8n that turns LinkedIn job postings into qualified sales opportunities. The system starts by identifying companies hiring for specific roles (a strong buying signal), then automatically finds decision-makers, validates their email addresses, and crafts AI-personalized messages based on their company's website. It manages intelligent follow-up sequences that adapt based on whether prospects are active on LinkedIn or prefer email, analyzes reply sentiment to prioritize hot leads, and sends real-time Slack notifications when someone shows interest. Everything syncs to Google Sheets for full visibility, and interested prospects automatically receive calendar booking links—turning cold outreach into warm conversations without any manual work.",
+      "longDescription": "A complete lead generation and outreach automation built with n8n that turns LinkedIn job postings into qualified sales opportunities. The system starts by identifying companies hiring for specific roles (a strong buying signal), then automatically finds the decision-makers, validates their email addresses, and crafts AI-personalized messages based on their company's website. It manages intelligent follow-up sequences that adapt based on whether prospects are active on LinkedIn or prefer email, analyzes reply sentiment to prioritize hot leads, and sends real-time Slack notifications when someone shows interest. Everything syncs to Google Sheets for full visibility, and interested prospects automatically receive calendar booking links—turning cold outreach into warm conversations without any manual work.",
       "technologies": ["n8n",
-        "Apify",
-        "Prospeo",
+        "airtable",
+        "Linkedin scraper",
         "OpenAI API",
         "Smartlead",
         "HeyReach",
         "Google Sheets",
         "Slack"],
-      "image": "/placeholder.svg?height=300&width=400",
+      "image": "/linkedin1.png?height=300&width=400",
       "gallery": [
         "/linkedin1.png?height=400&width=600",
         "/linked--2?height=400&width=600",
@@ -32,11 +32,12 @@
         "Automatic calendar link delivery to book meetings instantly",
         "Complete tracking dashboard in Google Sheets"
       ],
-      "results": "Generates 20+ qualified B2B leads monthly. Saves 25+ hours per week by eliminating manual prospecting, email hunting, and follow-up tracking. Clients typically see first meetings booked within 72 hours of launch."
+      "results": "Generates 20+ qualified B2B leads monthly depending on your niche and target market. Saves 25+ hours per week by eliminating manual prospecting, email hunting, and follow-up tracking."
     },
     {
       "id": "telegram-media-scraper",
       "title": "Telegram Media Scraper",
+      "category": "Scraping",
       "year": "2024",
       "description": "Advanced media extraction tool for Telegram channels, enabling bulk download and organization of images, videos, and documents.",
       "longDescription": "A sophisticated Python application using the Telethon library to extract media content from Telegram channels and groups. The tool handles authentication, media filtering, and batch processing while maintaining data integrity and respecting rate limits.",
@@ -56,12 +57,13 @@
       "results": "Processed over 10,000 media files for content creators and researchers"
     },
     {
-      "id": "job-board-scraper",
-      "title": "Demo Job Board Scraper",
+      "id": "rb2b-visitor-intelligence",
+      "title": "Anonymous Visitor to Lead Converter",
       "year": "2024",
-      "description": "Comprehensive job listing aggregator that collects opportunities from multiple job boards, providing a unified view of the job market.",
-      "longDescription": "A robust web scraping system built with Playwright and JavaScript that aggregates job listings from various job boards. The scraper handles dynamic content loading, form submissions, and data normalization to provide consistent job data across different sources.",
-      "technologies": ["Playwright", "JavaScript", "CSV", "Node.js", "Cheerio"],
+      "category": "Lead Generation",
+      "description": "Automated system that identifies anonymous website visitors, enriches their contact information, and triggers personalized outreach campaigns to convert curious browsers into paying customers.",
+      "longDescription": "A complete visitor intelligence and conversion automation that turns anonymous website traffic into qualified leads. The system integrates with an embedded script to identify companies and individuals visiting your website, enriches their contact data with verified emails and LinkedIn profiles, then automatically triggers personalized outreach sequences based on which pages they viewed and how long they spent on-site. Instead of letting 98% of your website traffic disappear anonymously, this workflow captures visitor intent in real-time, qualifies them based on their browsing behavior, and reaches out with tailored offers that speak directly to what they were researching—all while they're still warm and interested in your solution.",
+      "technologies": [ "n8n", "dropcontact", "Slack","OpenAI API", "Smartlead", "Google Sheets", "Webhooks", "Javascript"],
       "image": "/placeholder.svg?height=300&width=400",
       "gallery": [
         "/placeholder.svg?height=400&width=600",
@@ -69,13 +71,17 @@
         "/placeholder.svg?height=400&width=600"
       ],
       "features": [
-        "Multi-site job aggregation",
-        "Dynamic content handling",
-        "Data deduplication",
-        "Automated scheduling"
-      ],
-      "results": "Aggregated 50,000+ job listings monthly for recruitment agencies"
-    },
+    "Real-time visitor identification (captures 40-60% of anonymous traffic)",
+    "Enriches visitor data with email, phone, LinkedIn, and company info",
+    "Tracks pages viewed and time spent to gauge buying intent",
+    "AI-generated personalized outreach based on browsing behavior",
+    "Automatic follow-up sequences for high-intent visitors",
+    "Lead scoring based on pages visited (pricing = hot, blog = warm)",
+    "Real-time Slack notifications for high-value visitors",
+    "Syncs all visitor data to CRM/Google Sheets for sales team"
+  ],
+  "results": "Converts 15-25% of identified visitors into conversations (vs 2-3% industry average for cold outreach). Clients see 3-5x increase in qualified leads from existing website traffic with zero ad spend increase."
+},
     {
       "id": "ecommerce-inventory-tracker",
       "title": "E-commerce Inventory Tracker",

@@ -14,6 +14,7 @@ interface Project {
   id: string
   title: string
   year: string
+  category?: "Lead Generation" | "Workflow Automation" | "Admin Automation"
   description: string
   longDescription: string
   technologies: string[]
@@ -24,10 +25,16 @@ interface Project {
 }
 
 export default function Projects() {
+  const [selectedCategory, setSelectedCategory] = useState<string>("All")
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   const projects = projectsData.projects as Project[]
+  const categories = ["All", "Lead Generation", "Workflow Automation", "Admin Automation"]
+  
+  const filteredProjects = selectedCategory === "All" 
+    ? projects 
+    : projects.filter(p => p.category === selectedCategory)
 
   const nextImage = () => {
     if (selectedProject) {
@@ -59,17 +66,38 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-foreground mb-4">Featured Projects</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Explore my latest web scraping and automation projects that have helped businesses streamline operations and
-            unlock valuable data insights.
+          <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-foreground mb-4">
+            Real Results, Real Revenue
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty mb-8">
+            See how I've helped businesses capture more leads, eliminate bottlenecks, and reclaim hundreds of hours 
+            through intelligent automation systems.
           </p>
+
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map((category) => (
+              <Button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                variant={selectedCategory === category ? "default" : "outline"}
+                className={
+                  selectedCategory === category
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                    : "border-border hover:border-primary/50"
+                }
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
         </motion.div>
 
+        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
@@ -90,6 +118,24 @@ export default function Projects() {
                     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Category Badge */}
+                  {project.category && (
+                    <div className="absolute top-4 left-4">
+                      <Badge 
+                        className={
+                          project.category === "Lead Generation" 
+                            ? "bg-primary text-primary-foreground"
+                            : project.category === "Workflow Automation"
+                            ? "bg-accent text-accent-foreground"
+                            : "bg-[#FF6B6B] text-white"
+                        }
+                      >
+                        {project.category}
+                      </Badge>
+                    </div>
+                  )}
+
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="bg-primary text-primary-foreground px-2 py-1 rounded text-sm font-medium">
                       {project.year}
@@ -130,12 +176,35 @@ export default function Projects() {
           ))}
         </div>
 
+        {/* Empty State */}
+        {filteredProjects.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-muted-foreground">No projects found in this category yet.</p>
+          </div>
+        )}
+
         {/* Project Modal */}
         <Dialog open={!!selectedProject} onOpenChange={closeModal}>
           <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
             {selectedProject && (
               <>
                 <DialogHeader>
+                  <div className="flex items-center gap-3 mb-2">
+                    {selectedProject.category && (
+                      <Badge 
+                        className={
+                          selectedProject.category === "Lead Generation" 
+                            ? "bg-primary text-primary-foreground"
+                            : selectedProject.category === "Workflow Automation"
+                            ? "bg-accent text-accent-foreground"
+                            : "bg-[#FF6B6B] text-white"
+                        }
+                      >
+                        {selectedProject.category}
+                      </Badge>
+                    )}
+                    <span className="text-sm text-muted-foreground">{selectedProject.year}</span>
+                  </div>
                   <DialogTitle className="text-2xl font-bold font-poppins text-foreground">
                     {selectedProject.title}
                   </DialogTitle>
@@ -227,16 +296,21 @@ export default function Projects() {
 
                   {/* Action Buttons */}
                   <div className="flex gap-4 pt-4 border-t border-border">
-                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                      <Github className="h-4 w-4 mr-2" />
-                      View Code
+                    <Button 
+                      onClick={() => {
+                        closeModal()
+                        document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })
+                      }}
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    >
+                      Get Similar Results
                     </Button>
                     <Button
                       variant="outline"
                       className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                      onClick={closeModal}
                     >
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Live Demo
+                      Close
                     </Button>
                   </div>
                 </div>
