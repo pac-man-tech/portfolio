@@ -32,14 +32,23 @@ export default function Hero() {
             className="text-center lg:text-left"
           >
             <motion.h1
-              initial={{ opacity: 1, y: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold font-poppins text-foreground mb-6"
-            >
-              Stop Chasing Leads.{" "}
-              <span className="text-[#FF6B6B]">Start Capturing Them Automatically.</span>
-            </motion.h1>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold font-poppins text-foreground mb-6 leading-tight"
+>
+  Let Automation Work for You.
+  <br />
+
+  <motion.span
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, delay: 0.4 }}
+    className="block bg-gradient-to-r from-[#FF6B6B] to-[#4EA8DE] text-transparent bg-clip-text font-semibold font-inter"
+  >
+    Capture Leads Effortlessly, Grow with Ease.
+  </motion.span>
+</motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -47,7 +56,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-base sm:text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              I build custom lead generation systems and automation that work 24/7—so you get more qualified prospects, 
+              I build custom lead generation systems and automation workflows that work 24/7 so you get more qualified prospects, 
               eliminate manual busywork, and scale without burning out your team.
             </motion.p>
 
@@ -83,11 +92,11 @@ export default function Hero() {
               className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-border"
             >
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-primary font-poppins">$2.4M+</div>
+                <div className="text-2xl font-bold text-primary font-poppins">$20k+</div>
                 <div className="text-sm text-muted-foreground">Revenue Generated</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-primary font-poppins">10K+</div>
+                <div className="text-2xl font-bold text-primary font-poppins">2K+</div>
                 <div className="text-sm text-muted-foreground">Leads Captured</div>
               </div>
               <div className="text-center lg:text-left">
