@@ -167,21 +167,6 @@ export default function Contact() {
                 ))}
               </div>
             </div>
-
-            {/* Quick Stats */}
-            <div className="bg-muted/50 rounded-lg p-6">
-              <h4 className="text-lg font-semibold font-poppins text-foreground mb-4">Why Work With Me?</h4>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary font-poppins">24h</div>
-                  <div className="text-sm text-muted-foreground">Response Time</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary font-poppins">100%</div>
-                  <div className="text-sm text-muted-foreground">Project Success</div>
-                </div>
-              </div>
-            </div>
           </motion.div>
 
           {/* Contact Form */}

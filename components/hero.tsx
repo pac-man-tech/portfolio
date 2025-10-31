@@ -55,7 +55,8 @@ export default function Hero() {
               transition={{ duration: 1, ease: 'easeOut', delay: 0.8 }}
               className="text-base sm:text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              Transform your agency with advanced AI systems. From automated client acquisition to scaling beyond 7-figures.I build custom lead generation systems and automation workflows that work 24/7 so you get more qualified prospects, 
+              <br/>
+              From automated client acquisition to scaling beyond 7-figures.I build custom lead generation systems and automation workflows that work 24/7 so you get more qualified prospects, 
               eliminate manual busywork, and scale without burning out your team.
             </motion.p>
 

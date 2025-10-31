@@ -54,16 +54,17 @@ export default function Skills() {
   const techStack = [
     "Python",
     "n8n",
-    "Scrapy",
-    "Playwright",
-    "JavaScript",
-    "APIs",
+    "Airtable",
+    "Heyreach",
+    "Brevo",
+    "REST APIs",
     "PostgreSQL",
-    "MongoDB",
+    "HubSpot",
     "Docker",
-    "AWS",
+    "GA4",
     "Make/Zapier",
-    "Git",
+    "GTM",
+    "Webhooks"
   ]
 
   const results = [
@@ -78,9 +79,9 @@ export default function Skills() {
       description: "Reliable automation that works around the clock",
     },
     {
-      metric: "15K+",
+      metric: "2K+",
       label: "Leads Captured",
-      description: "For clients in the last 12 months",
+      description: "For clients in the last 3 months",
     },
   ]
 
@@ -188,7 +189,7 @@ export default function Skills() {
             ))}
           </div>
           <p className="text-sm text-muted-foreground mt-6 max-w-2xl mx-auto">
-            The right tool for every job—I choose based on your needs, not what's trendy. If it works and scales, I use it.
+            I choose the right tool for every job based on your needs, not what's trendy. If it works and scales, I use it.
           </p>
         </motion.div>
       </div>
