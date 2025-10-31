@@ -10,7 +10,7 @@ export default function About() {
   const achievements = [
     {
       icon: Award,
-      title: "Proven Track Record",
+      title: "Tested & Proven Workflow systems",
       description: "50+ businesses automated successfully",
     },
     {
@@ -44,7 +44,7 @@ export default function About() {
             Your Growth Partner, Not Just a Developer
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            I build lead generation machines and automation systems that work while you sleep—so you can focus on 
+            I build lead generation workflows and automation systems that work while you sleep so you can focus on 
             closing deals, not chasing them.
           </p>
         </motion.div>
@@ -70,7 +70,7 @@ export default function About() {
                     className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-primary/20"
                   />
                   <div className="text-center">
-                    <h3 className="text-xl font-semibold font-poppins text-foreground mb-2">John Pacman</h3>
+                    <h3 className="text-xl font-semibold font-poppins text-foreground mb-2">Victor Folajimi</h3>
                     <p className="text-accent font-medium mb-4">Lead Generation & Automation Specialist</p>
                     <Button
                       onClick={downloadResume}
@@ -118,11 +118,11 @@ export default function About() {
           >
             <div>
               <h3 className="text-2xl font-semibold font-poppins text-foreground mb-4">
-                I Turn Manual Tasks Into Money-Making Machines
+                I turn manual tasks into Money-Making Machines
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                For 5+ years, I've helped businesses escape the cycle of manual lead hunting and repetitive tasks. 
-                My custom automation systems don't just save time—they capture opportunities you're currently missing, 
+                For over 2years now, I've been helping businesses escape the cycle of manual lead hunting and repetitive tasks. 
+                My custom automation systems save time by capturing opportunities you're currently missing, 
                 qualify leads automatically, and feed your sales pipeline 24/7 without adding headcount.
               </p>
             </div>
@@ -149,10 +149,10 @@ export default function About() {
               <div>
                 <h4 className="text-lg font-semibold font-poppins text-foreground mb-2">How I'm Different</h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  I don't just write code and disappear. Every solution comes with clear documentation your team 
+                  I don't just write code and disappear. Every solution will come with clear documentation your team 
                   can actually use, training so you're never dependent on me, and 30 days of post-launch support. 
-                  You'll know exactly how it works, what it costs, and what results to expect—no surprises, 
-                  no technical jargon, just systems that make you money.
+                  You'll know exactly how it works, what it costs, and what results to expect, so no surprises, 
+                  no technical jargon, just systems that saves you time and make you money.
                 </p>
               </div>
             </div>

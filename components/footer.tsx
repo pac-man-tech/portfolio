@@ -28,17 +28,17 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/pacmantech",
+      href: "https://www.linkedin.com/in/victor-folajimi-b1051624b",
       label: "LinkedIn",
     },
     {
       icon: Github,
-      href: "https://github.com/pacmantech",
+      href: "https://github.com/pac-man-tech/",
       label: "GitHub",
     },
     {
       icon: Twitter,
-      href: "https://twitter.com/pacmantech",
+      href: "https://twitter.com/pacman_nl",
       label: "Twitter",
     },
     {
@@ -65,7 +65,7 @@ export default function Footer() {
               <div className="mb-4">
                 <h3 className="text-2xl font-bold font-poppins text-primary mb-2">Pacman Tech Solutions</h3>
                 <p className="text-muted-foreground leading-relaxed max-w-md">
-                  Building lead generation machines and automation systems that capture opportunities 24/7—so you can 
+                  Building lead generation workflows and automation systems that capture opportunities 24/7s o you can 
                   focus on growth, not grunt work.
                 </p>
               </div>

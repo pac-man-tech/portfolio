@@ -23,40 +23,39 @@ export default function Hero() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 relative z-0">
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Left Column - Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
-          >
-            <motion.h1
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.2 }}
-  className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold font-poppins text-foreground mb-6 leading-tight"
->
-  Let Automation Work for You.
-  <br />
+  <div className="grid lg:grid-cols-2 gap-8 items-center">
+    {/* Left Column - Content */}
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      className="flex flex-col items-center lg:items-start text-center lg:text-left"
+    >
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        className="text-3xl sm:text-4xl lg:text-5xl font-bold font-poppins text-foreground mb-4 leading-tight"
+      >
+        Let Automation Work for You.
+      </motion.h1>
 
-  <motion.span
-    initial={{ opacity: 0, y: 10 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, delay: 0.4 }}
-    className="block bg-gradient-to-r from-[#FF6B6B] to-[#4EA8DE] text-transparent bg-clip-text font-semibold font-inter"
-  >
-    Capture Leads Effortlessly, Grow with Ease.
-  </motion.span>
-</motion.h1>
+      <motion.span
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
+        className="block text-xl sm:text-2xl lg:text-3xl bg-gradient-to-r from-[#FF6B6B] to-[#4EA8DE] text-transparent bg-clip-text font-medium font-inter"
+      >
+        Capture Leads Effortlessly, Grow with Ease.
+      </motion.span>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 1, ease: 'easeOut', delay: 0.8 }}
               className="text-base sm:text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              I build custom lead generation systems and automation workflows that work 24/7 so you get more qualified prospects, 
+              Transform your agency with advanced AI systems. From automated client acquisition to scaling beyond 7-figures.I build custom lead generation systems and automation workflows that work 24/7 so you get more qualified prospects, 
               eliminate manual busywork, and scale without burning out your team.
             </motion.p>
 

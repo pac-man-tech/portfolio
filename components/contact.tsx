@@ -51,8 +51,8 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+234 (81) 368-68384",
+      href: "tel:+2348136868384",
     },
     {
       icon: MapPin,
@@ -65,17 +65,17 @@ export default function Contact() {
   const socialLinks = [
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/pacmantech",
+      href: "https://www.linkedin.com/in/victor-folajimi-b1051624b",
       label: "LinkedIn",
     },
     {
       icon: Github,
-      href: "https://github.com/pacmantech",
+      href: "https://github.com/pac-man-tech/",
       label: "GitHub",
     },
     {
       icon: Twitter,
-      href: "https://twitter.com/pacmantech",
+      href: "https://twitter.com/pacman_nl",
       label: "Twitter",
     },
   ]
@@ -92,8 +92,8 @@ export default function Contact() {
         >
           <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-foreground mb-4">Get In Touch</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Ready to automate your data processes? Let's discuss how I can help streamline your business operations and
-            unlock valuable insights.
+            Ready to automate your data processes? Let's discuss how I can put your business ahead of your competitors by boost your bussiness operations and
+            unlocking valuable insights.
           </p>
         </motion.div>
 
