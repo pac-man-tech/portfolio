@@ -151,7 +151,7 @@ export default function Skills() {
             ))}
           </div>
           <p className="text-sm text-muted-foreground mt-6 max-w-2xl mx-auto">
-            The right tool for every job—I choose based on your needs, not what's trendy. If it works and scales, I use it.
+            I choose the right tool for every job based on your needs, not what's trendy. If it works and scales, I use it.
           </p>
         </motion.div>
       </div>
