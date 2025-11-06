@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion"
 import { Target, Workflow, Zap, Shield } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
+import Testimonials from './testimonial'
 
 export default function Skills() {
   const expertise = [
@@ -67,27 +69,10 @@ export default function Skills() {
     "Webhooks"
   ]
 
-  const results = [
-    {
-      metric: "500+",
-      label: "Hours Saved Monthly",
-      description: "Across all active automation systems",
-    },
-    {
-      metric: "99.2%",
-      label: "System Uptime",
-      description: "Reliable automation that works around the clock",
-    },
-    {
-      metric: "2K+",
-      label: "Leads Captured",
-      description: "For clients in the last 3 months",
-    },
-  ]
-
   return (
     <section id="skills" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -112,66 +97,43 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-card rounded-lg p-6 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg group"
             >
-              <div className="flex items-start mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
-                  <item.icon className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold font-poppins text-foreground mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
-                </div>
-              </div>
+              <Card className="h-full border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg group">
+                <CardContent className="p-6">
+                  <div className="flex items-start mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
+                      <item.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold font-poppins text-foreground mb-2">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                    </div>
+                  </div>
 
-              <ul className="space-y-2">
-                {item.capabilities.map((capability) => (
-                  <li key={capability} className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 mr-3 flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">{capability}</span>
-                  </li>
-                ))}
-              </ul>
+                  <ul className="space-y-2">
+                    {item.capabilities.map((capability) => (
+                      <li key={capability} className="flex items-start">
+                        <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 mr-3 flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">{capability}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
             </motion.div>
           ))}
         </div>
 
-        {/* Results Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <h3 className="text-2xl font-semibold font-poppins text-foreground text-center mb-8">
-            The Numbers That Matter
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {results.map((result, index) => (
-              <motion.div
-                key={result.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="text-4xl font-bold text-primary font-poppins mb-2">{result.metric}</div>
-                <div className="text-lg font-semibold text-foreground mb-2">{result.label}</div>
-                <p className="text-sm text-muted-foreground">{result.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+        {/* Testimonials Section */}
+        <Testimonials />
 
-        {/* Tech Stack - Minimal */}
+        {/* Tech Stack */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center"
+          className="text-center mt-16"
         >
           <h3 className="text-lg font-semibold font-poppins text-foreground mb-4">Technologies I Use</h3>
           <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
@@ -189,7 +151,7 @@ export default function Skills() {
             ))}
           </div>
           <p className="text-sm text-muted-foreground mt-6 max-w-2xl mx-auto">
-            I choose the right tool for every job based on your needs, not what's trendy. If it works and scales, I use it.
+            The right tool for every job—I choose based on your needs, not what's trendy. If it works and scales, I use it.
           </p>
         </motion.div>
       </div>

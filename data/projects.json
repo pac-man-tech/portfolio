@@ -14,12 +14,12 @@
         "HeyReach",
         "Google Sheets",
         "Slack"],
-      "image": "/linkedin1.png?height=300&width=400",
+      "image": "/images/linkedin_outreach/linked-4.png",
       "gallery": [
-        "/images/linkedin_outreach/linkedin1.png?height=400&width=600",
-        "/images/linkedin_outreach/linked--2?height=400&width=600",
-        "/images/linkedin_outreach/linked-3?height=400&width=600",
-        "/images/linkedin_outreach/linked-4?height=400&width=600"
+        "/images/linkedin_outreach/linkedin_1.png",
+        "/images/linkedin_outreach/linked--2.png",
+        "/images/linkedin_outreach/linked-3.png",
+        "/images/linkedin_outreach/linked-4.png"
       ],
       "features": [
         "Scrapes LinkedIn job postings to find companies with active budgets",
@@ -42,7 +42,7 @@
       "description": "Advanced media extraction tool for Telegram channels, enabling bulk download and organization of images, videos, and documents.",
       "longDescription": "A sophisticated Python application using the Telethon library to extract media content from Telegram channels and groups. The tool handles authentication, media filtering, and batch processing while maintaining data integrity and respecting rate limits.",
       "technologies": ["Python", "Telethon", "JSON", "AsyncIO", "SQLite"],
-      "image": "/placeholder.svg?height=300&width=400",
+      "image": "/placeholder.svg",
       "gallery": [
         "/placeholder.svg?height=400&width=600",
         "/placeholder.svg?height=400&width=600",
@@ -58,18 +58,18 @@
     },
     {
       "id": "rb2b-visitor-intelligence",
-      "title": "Anonymous Visitor to Lead Converter",
+      "title": "Anonymous Website Visitor to Lead Converter",
       "year": "2024",
       "category": "Lead Generation",
       "description": "Automated system that identifies anonymous website visitors, enriches their contact information, and triggers personalized outreach campaigns to convert curious browsers into paying customers.",
       "longDescription": "A complete visitor intelligence and conversion automation that turns anonymous website traffic into qualified leads. The system integrates with an embedded script to identify companies and individuals visiting your website, enriches their contact data with verified emails and LinkedIn profiles, then automatically triggers personalized outreach sequences based on which pages they viewed and how long they spent on-site. Instead of letting 98% of your website traffic disappear anonymously, this workflow captures visitor intent in real-time, qualifies them based on their browsing behavior, and reaches out with tailored offers that speak directly to what they were researching—all while they're still warm and interested in your solution.",
       "technologies": [ "n8n", "dropcontact", "Slack","OpenAI API", "Smartlead", "Google Sheets", "Webhooks", "Javascript"],
-      "image": "/images/Anonymous_visitor/rb2b4?height=400&width=600",
+      "image": "/images/Anonymous_visitor/rb2b4.png",
       "gallery": [
-        "/images/Anonymous_visitor/rb2b1?height=400&width=600",
-        "/images/Anonymous_visitor/rb2b2?height=400&width=600",
-        "/images/Anonymous_visitor/rb2b3?height=400&width=600",
-        "/images/Anonymous_visitor/rb2b4?height=400&width=600"
+        "/images/Anonymous_visitor/rb2b1.png",
+        "/images/Anonymous_visitor/rb2b2.png",
+        "/images/Anonymous_visitor/rb2b3.png",
+        "/images/Anonymous_visitor/rb2b4.png"
       ],
       "features": [
     "Real-time visitor identification (captures 40-60% of anonymous traffic)",
@@ -90,12 +90,12 @@
   "description": "An AI-powered sales development workflow that automates prospecting, lead research, and data collection — saving hours of manual work every day.",
   "longDescription": "The AI SDR Agent helps sales teams and agencies eliminate the tedious, time-consuming parts of prospecting. Instead of manually searching for leads, checking websites, and collecting contact details, this intelligent workflow automatically discovers potential clients, analyzes their websites, and extracts key information — all in minutes. It scrapes Google to find relevant businesses, reads and understands website content using AI, and captures company names, descriptions, social links, and emails. All leads are automatically organized into Google Sheets or Airtable, ready for outreach. \n\nWith this automation, teams can focus on closing deals instead of researching them — cutting lead research time by over 80% and reducing prospecting costs by thousands each month. The workflow runs 24/7, ensuring your pipeline is always full without hiring extra SDRs.",
   "technologies": ["n8n", "OpenAI", "Python", "Playwright", "Google Sheets API", "Airtable API"],
-  "image": "/images/ai_sdr/sdr_4?height=400&width=600",
+  "image": "/images/ai_sdr/sdr_4.png",
   "gallery": [
-    "/images/ai_sdr/sdr1?height=400&width=600",
-    "/images/ai_sdr/sdr2?height=400&width=600",
-    "/images/ai_sdr/sdr_3?height=400&width=600",
-    "/images/ai_sdr/sdr_4?height=400&width=600"
+    "/images/ai_sdr/sdr1.png",
+    "/images/ai_sdr/sdr2.png",
+    "/images/ai_sdr/sde_3.png",
+    "/images/ai_sdr/sdr_4.png"
   ],
   "features": [
     "Automates prospect discovery across Google and business directories",
