@@ -1,8 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react"
+import { ExternalLink, Github, ChevronLeft, ChevronRight, RefreshCw } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -14,7 +14,7 @@ interface Project {
   id: string
   title: string
   year: string
-  category?: "Lead Generation" | "Workflow Automation" | "Admin Automation"
+  category?: "Lead Generation" | "Workflow Automation" | "Admin Automation" | "Web Scraping" | "AI Automation"
   description: string
   longDescription: string
   technologies: string[]
@@ -28,13 +28,36 @@ export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All")
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [displayedProjects, setDisplayedProjects] = useState<Project[]>([])
+  const [showAll, setShowAll] = useState(false)
 
   const projects = projectsData.projects as Project[]
-  const categories = ["All", "Lead Generation", "Workflow Automation", "Admin Automation"]
+  const categories = ["All", "Lead Generation", "Workflow Automation", "Admin Automation", "AI Automation", "Web Scraping"]
   
   const filteredProjects = selectedCategory === "All" 
     ? projects 
     : projects.filter(p => p.category === selectedCategory)
+
+  // Shuffle projects for rotation
+  const shuffleProjects = (projectList: Project[]) => {
+    const shuffled = [...projectList]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    return shuffled
+  }
+
+  // Initialize with first 4 projects or shuffled selection
+  useEffect(() => {
+    const initialProjects = showAll ? filteredProjects : filteredProjects.slice(0, 4)
+    setDisplayedProjects(initialProjects)
+  }, [selectedCategory, showAll, filteredProjects.length])
+
+  const rotateProjects = () => {
+    const shuffled = shuffleProjects(filteredProjects)
+    setDisplayedProjects(showAll ? shuffled : shuffled.slice(0, 4))
+  }
 
   const nextImage = () => {
     if (selectedProject) {
@@ -77,11 +100,14 @@ export default function Projects() {
           </p>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
             {categories.map((category) => (
               <Button
                 key={category}
-                onClick={() => setSelectedCategory(category)}
+                onClick={() => {
+                  setSelectedCategory(category)
+                  setShowAll(false)
+                }}
                 variant={selectedCategory === category ? "default" : "outline"}
                 className={
                   selectedCategory === category
@@ -93,11 +119,24 @@ export default function Projects() {
               </Button>
             ))}
           </div>
+
+          {/* Rotate Button */}
+          {!showAll && filteredProjects.length > 4 && (
+            <Button
+              onClick={rotateProjects}
+              variant="outline"
+              size="sm"
+              className="gap-2"
+            >
+              <RefreshCw className="h-4 w-4" />
+              Show Different Projects
+            </Button>
+          )}
         </motion.div>
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {filteredProjects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
@@ -115,7 +154,7 @@ export default function Projects() {
                     alt={project.title}
                     width={400}
                     height={300}
-                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-48 object-contain transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
@@ -128,6 +167,8 @@ export default function Projects() {
                             ? "bg-primary text-primary-foreground"
                             : project.category === "Workflow Automation"
                             ? "bg-accent text-accent-foreground"
+                            : project.category === "AI Automation"
+                            ? "bg-purple-500 text-white"
                             : "bg-[#FF6B6B] text-white"
                         }
                       >
@@ -176,6 +217,26 @@ export default function Projects() {
           ))}
         </div>
 
+        {/* View More / View Less Button */}
+        {filteredProjects.length > 4 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Button
+              onClick={() => setShowAll(!showAll)}
+              size="lg"
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            >
+              {showAll ? "Show Less Projects" : `View All ${filteredProjects.length} Projects`}
+            </Button>
+          </motion.div>
+        )}
+
         {/* Empty State */}
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
@@ -197,6 +258,8 @@ export default function Projects() {
                             ? "bg-primary text-primary-foreground"
                             : selectedProject.category === "Workflow Automation"
                             ? "bg-accent text-accent-foreground"
+                            : selectedProject.category === "AI Automation"
+                            ? "bg-purple-500 text-white"
                             : "bg-[#FF6B6B] text-white"
                         }
                       >
@@ -218,7 +281,7 @@ export default function Projects() {
                         src={selectedProject.gallery[currentImageIndex] || "/placeholder.svg"}
                         alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                       />
 
                       {selectedProject.gallery.length > 1 && (

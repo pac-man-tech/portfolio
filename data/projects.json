@@ -4,7 +4,7 @@
       "id": "linkedin-job-signal-intelligence",
       "title": "LinkedIn Hiring Signal Intelligence",
       "year": "2025",
-      "description": "Automated system that finds companies actively hiring, enriches contact data, and runs personalized outreach campaigns across email and LinkedIn—generating qualified leads while you sleep.",
+      "description": "Automated system that finds companies actively hiring, enriches contact data, and runs personalized outreach campaigns across email and LinkedIn, generating qualified leads while you sleep.",
       "longDescription": "A complete lead generation and outreach automation built with n8n that turns LinkedIn job postings into qualified sales opportunities. The system starts by identifying companies hiring for specific roles (a strong buying signal), then automatically finds the decision-makers, validates their email addresses, and crafts AI-personalized messages based on their company's website. It manages intelligent follow-up sequences that adapt based on whether prospects are active on LinkedIn or prefer email, analyzes reply sentiment to prioritize hot leads, and sends real-time Slack notifications when someone shows interest. Everything syncs to Google Sheets for full visibility, and interested prospects automatically receive calendar booking links—turning cold outreach into warm conversations without any manual work.",
       "technologies": ["n8n",
         "airtable",
@@ -35,27 +35,32 @@
       "results": "Generates 20+ qualified B2B leads monthly depending on your niche and target market. Saves 25+ hours per week by eliminating manual prospecting, email hunting, and follow-up tracking."
     },
     {
-      "id": "telegram-media-scraper",
-      "title": "Telegram Media Scraper",
-      "category": "Scraping",
-      "year": "2024",
-      "description": "Advanced media extraction tool for Telegram channels, enabling bulk download and organization of images, videos, and documents.",
-      "longDescription": "A sophisticated Python application using the Telethon library to extract media content from Telegram channels and groups. The tool handles authentication, media filtering, and batch processing while maintaining data integrity and respecting rate limits.",
-      "technologies": ["Python", "Telethon", "JSON", "AsyncIO", "SQLite"],
-      "image": "/placeholder.svg",
-      "gallery": [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600"
-      ],
-      "features": [
-        "Bulk media download",
-        "Channel authentication handling",
-        "Media type filtering",
-        "Progress tracking and logging"
-      ],
-      "results": "Processed over 10,000 media files for content creators and researchers"
-    },
+  "id": "ai-product-photography",
+  "title": "AI Product Photography Automation",
+  "category": "AI Automation",
+  "year": "2025",
+  "description": "Automated AI workflow that generates professional product photos immediately they are added to inventory by placing clothing and accessories on virtual models, which makes your products more visually appealing to customers and eliminates photoshoot costs and delays.",
+  "longDescription": "An intelligent automation system that monitors inventory systems (Shopify, WooCommerce, or custom databases) and automatically generates professional product photography the moment new items are added to stock. Using advanced AI models, the workflow places clothing, accessories, and jewelry on diverse virtual models with perfect lighting, backgrounds, and styling. The system handles batch processing for entire collections, creates multiple angles and lifestyle shots, and directly uploads finished images to e-commerce platforms—turning a 2-week photoshoot process into a 2-hour automated workflow. Perfect for fashion brands, jewelry stores, and accessory shops that need consistent, high-quality product imagery at scale without the expense of models, photographers, or studios.",
+  "technologies": ["n8n", "Midjourney API", "DALL-E 3", "Shopify API", "Python", "Google Cloud Vision", "OpenAI"],
+  "image": "/images/img_models/img_m4.jpg",
+  "gallery": [
+    "/images/img_models/img_1.jpg",
+    "/images/img_models/img_m2.png",
+    "/images/img_models/img_m3.png",
+    "/images/img_models/img_m4.jpg"
+  ],
+  "features": [
+    "Automatic trigger when new products are added to inventory",
+    "AI model selection (different body types, ethnicities, poses)",
+    "Multiple angle generation (front, side, back, detail shots)",
+    "Background customization (studio, lifestyle, outdoor scenes)",
+    "Batch processing for entire product collections",
+    "Direct upload to Shopify, WooCommerce, or custom platforms",
+    "Quality control and human approval workflow option",
+    "A/B testing different model presentations"
+  ],
+  "results": "Reduced product photography costs by 90% for e-commerce clients. Generated 500+ professional product images weekly, cutting time-to-market from 14 days to 2 hours. One client increased conversion rates by 34% using AI-generated lifestyle shots."
+},
     {
       "id": "rb2b-visitor-intelligence",
       "title": "Anonymous Website Visitor to Lead Converter",
@@ -87,8 +92,8 @@
   "id": "ai-sdr-agent",
   "title": "AI SDR Agent",
   "year": "2025",
-  "description": "An AI-powered sales development workflow that automates prospecting, lead research, and data collection — saving hours of manual work every day.",
-  "longDescription": "The AI SDR Agent helps sales teams and agencies eliminate the tedious, time-consuming parts of prospecting. Instead of manually searching for leads, checking websites, and collecting contact details, this intelligent workflow automatically discovers potential clients, analyzes their websites, and extracts key information — all in minutes. It scrapes Google to find relevant businesses, reads and understands website content using AI, and captures company names, descriptions, social links, and emails. All leads are automatically organized into Google Sheets or Airtable, ready for outreach. \n\nWith this automation, teams can focus on closing deals instead of researching them — cutting lead research time by over 80% and reducing prospecting costs by thousands each month. The workflow runs 24/7, ensuring your pipeline is always full without hiring extra SDRs.",
+  "description": "An AI-powered sales development workflow that automates prospecting, lead research, and data collection, saving hours of manual work every day.",
+  "longDescription": "The AI SDR Agent helps sales teams and agencies eliminate the tedious, time-consuming parts of prospecting. Instead of manually searching for leads, checking websites, and collecting contact details, this intelligent workflow automatically discovers potential clients, analyzes their websites, and extracts key information all in minutes. It scrapes Google to find relevant businesses, reads and understands website content using AI, and captures company names, descriptions, social links, and emails. All leads are automatically organized into Google Sheets or Airtable, ready for outreach. \n\nWith this automation, teams can focus on closing warm deals instead of researching them which cuts lead research time by over 80% and reducing prospecting costs by thousands by the end of the year. The workflow runs 24/7, ensuring your pipeline is always full without hiring extra SDRs.",
   "technologies": ["n8n", "OpenAI", "Python", "Playwright", "Google Sheets API", "Airtable API"],
   "image": "/images/ai_sdr/sdr_4.png",
   "gallery": [
@@ -102,10 +107,32 @@
     "Analyzes website content with AI to qualify potential clients",
     "Finds and validates emails and social media profiles automatically",
     "Delivers clean, structured lead data directly into Google Sheets or Airtable",
-    "Operates continuously — even while your team sleeps"
+    "Operates continuously, even while your team sleeps"
   ],
   "results": "Reduced manual prospecting time by 80%, increased qualified lead flow, and helped clients scale outreach without increasing headcount."
-}
+},
+{
+      "id": "telegram-media-scraper",
+      "title": "Telegram Media Scraper",
+      "category": "Scraping",
+      "year": "2024",
+      "description": "Advanced media extraction tool for Telegram channels, enabling bulk download and organization of images, videos, and documents.",
+      "longDescription": "A sophisticated Python application using the Telethon library to extract media content from Telegram channels and groups. The tool handles authentication, media filtering, and batch processing while maintaining data integrity and respecting rate limits.",
+      "technologies": ["Python", "Telethon", "JSON", "AsyncIO", "SQLite"],
+      "image": "/placeholder.svg",
+      "gallery": [
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600"
+      ],
+      "features": [
+        "Bulk media download",
+        "Channel authentication handling",
+        "Media type filtering",
+        "Progress tracking and logging"
+      ],
+      "results": "Processed over 10,000 media files for content creators and researchers"
+    }
 
   ]
 }

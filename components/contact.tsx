@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { useToast } from "@/hooks/use-toast"
 
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -26,31 +27,54 @@ export default function Contact() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  e.preventDefault()
+  setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+  const form = e.target as HTMLFormElement
 
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for reaching out. I'll get back to you within 24 hours.",
+  try {
+    const response = await fetch("https://formspree.io/f/meovjrlb", {
+      method: "POST",
+      body: new FormData(form),
+      headers: {
+        Accept: "application/json",
+      },
     })
 
-    setFormData({ name: "", email: "", message: "" })
+    if (response.ok) {
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you within 12 hours.",
+      })
+      setFormData({ name: "", email: "", message: "" })
+    } else {
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or email me directly.",
+        variant: "destructive",
+      })
+    }
+  } catch (error) {
+    toast({
+      title: "Failed to send message",
+      description: "Please try again or email me directly.",
+      variant: "destructive",
+    })
+  } finally {
     setIsSubmitting(false)
   }
+}
 
   const contactInfo = [
     {
-      icon: Mail,
-      title: "Email",
-      value: "hello@pacmantech.dev",
-      href: "mailto:hello@pacmantech.dev",
+      icon: Twitter,
+      title: "X",
+      value: "Pacman Tech",
+      href: "https://twitter.com/pacman_nl",
     },
     {
       icon: Phone,
-      title: "Phone",
+      title: "Whatsapp",
       value: "+234 (81) 368-68384",
       href: "tel:+2348136868384",
     },
@@ -92,9 +116,7 @@ export default function Contact() {
         >
           <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-foreground mb-4">Get In Touch</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Ready to automate your data processes? Let's discuss how I can put your business ahead of your competitors by boost your bussiness operations and
-            unlocking valuable insights.
-          </p>
+            Ready to automate your data processes?</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -109,7 +131,7 @@ export default function Contact() {
             <div>
               <h3 className="text-2xl font-semibold font-poppins text-foreground mb-6">Let's Start a Conversation</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Whether you need a simple data extraction script or a complex automation workflow, I'm here to help.
+                Maybe its a simple data extraction script or you want a complex automation workflow.
                 Every project starts with understanding your unique challenges and goals.
               </p>
             </div>
@@ -178,7 +200,7 @@ export default function Contact() {
           >
             <Card className="border-border">
               <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6" action="https://formspree.io/f/meovjrlb" method="POST">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Your Name
@@ -248,12 +270,12 @@ export default function Contact() {
 
                 <div className="mt-6 pt-6 border-t border-border text-center">
                   <p className="text-sm text-muted-foreground">
-                    Prefer email?{" "}
+                    Prefer upwork?{" "}
                     <a
-                      href="mailto:hello@pacmantech.dev"
+                      href="https://www.upwork.com/freelancers/~01d7fcfd0a17b9a172"
                       className="text-accent hover:text-accent/80 transition-colors"
                     >
-                      hello@pacmantech.dev
+                      Upwork
                     </a>
                   </p>
                 </div>

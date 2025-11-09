@@ -56,7 +56,7 @@ export default function Hero() {
               className="text-base sm:text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
             >
               <br/>
-              From automated client acquisition to scaling beyond 7-figures.I build custom lead generation systems and automation workflows that work 24/7 so you get more qualified prospects, 
+              From automated client acquisition to scaling beyond 7-figures. I build custom lead generation systems and automation workflows that work 24/7 so you get more qualified prospects, 
               eliminate manual busywork, and scale without burning out your team.
             </motion.p>
 

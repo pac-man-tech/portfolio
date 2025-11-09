@@ -63,7 +63,7 @@ export default function About() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl transform rotate-6"></div>
                 <div className="relative bg-card rounded-2xl p-8 shadow-lg border border-border">
                   <Image
-                    src="/web-developer-headshot.png"
+                    src="/images/pfp.jpg"
                     alt="Professional headshot"
                     width={200}
                     height={200}
@@ -118,12 +118,11 @@ export default function About() {
           >
             <div>
               <h3 className="text-2xl font-semibold font-poppins text-foreground mb-4">
-                I turn manual tasks into Money-Making Machines
+                BIO
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                For over 2years now, I've been helping businesses escape the cycle of manual lead hunting and repetitive tasks. 
-                My custom automation systems save time by capturing opportunities you're currently missing, 
-                qualify leads automatically, and feed your sales pipeline 24/7 without adding headcount.
+                I started my career as Python developer, because I find beauty in automating tasks. Discovering n8n took this passion to a new level, allowing me to craft elegant, lean, and lightning-fast solutions with the same flexibility and power that writing Python scripts offered. My mission is to give time back to the creative, strategic minds who need it most, and my greatest joy is seeing a process that once took hours now execute in seconds.
+                ​I specialize in helping businesses escape the cycle of manual lead hunting and repetitive, tedious work. Join the successful organizations I've partnered with today and start focusing on what truly matters.
               </p>
             </div>
 
@@ -151,8 +150,7 @@ export default function About() {
                 <p className="text-muted-foreground leading-relaxed">
                   I don't just write code and disappear. Every solution will come with clear documentation your team 
                   can actually use, training so you're never dependent on me, and 30 days of post-launch support. 
-                  You'll know exactly how it works, what it costs, and what results to expect, so no surprises, 
-                  no technical jargon, just systems that saves you time and make you money.
+                  You'll know exactly how it works, what it costs, and what results to expect.
                 </p>
               </div>
             </div>

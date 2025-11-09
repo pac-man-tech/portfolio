@@ -26,7 +26,7 @@ export default function Skills() {
         "n8n workflow development",
         "API integrations (any platform)",
         "Data syncing between systems",
-        "Custom automation scripts",
+        "Chatbots and AI call systems"
       ],
     },
     {
@@ -46,7 +46,7 @@ export default function Skills() {
       description: "Built to run 24/7 without breaking",
       capabilities: [
         "Error handling & recovery",
-        "Performance optimization",
+        "Creativity to adapt uniquely to your use case",
         "Monitoring & alerts",
         "Easy maintenance",
       ],
@@ -83,9 +83,6 @@ export default function Skills() {
           <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-foreground mb-4">
             What I Bring to Your Business
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            The expertise and tools to build automation that actually works—and keeps working.
-          </p>
         </motion.div>
 
         {/* Expertise Grid */}

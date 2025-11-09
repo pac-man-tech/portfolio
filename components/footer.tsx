@@ -43,7 +43,7 @@ export default function Footer() {
     },
     {
       icon: Mail,
-      href: "mailto:hello@pacmantech.dev",
+      href: "mailto:victor.pacmantech@gmail.com",
       label: "Email",
     },
   ]

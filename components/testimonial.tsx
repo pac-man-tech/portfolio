@@ -10,32 +10,32 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      title: "VP of Sales, TechCorp",
-      image: "/images/testimonials/client.jpg",
-      text: "The LinkedIn lead generation system generated 500+ qualified leads in the first month. Our sales team is overwhelmed with opportunities—in a good way!"
+      name: "Olayinka Emidun",
+      title: "CEO, Cela Naturals",
+      image: "/images/testimonials/CELA.png",
+      text: "Before hiring Pacman tech, we usually handled our inventories manually, which took a lot of time and resources, I also manually prospect leads for about 3/4 hours everyday. Pacman took time to understand our goals and designed a brilliant solution. The results have been phenomenal, we now save money and 30+ hours every week from automated leads and administrative work, the system paid for itself in two weeks. I highly recommend Pacman tech to anyone serious about smart, effective business automation"
     },
     {
-      name: "Michael Chen",
-      title: "Founder, GrowthLabs",
+      name: "Mr. Blessing",
+      title: "Founder, SpotlightCode Digital Businesses",
       image: "/images/testimonials/b&w.jpg",
-      text: "We went from manually prospecting for 6 hours daily to having warm leads delivered automatically. This automation paid for itself in the first week."
+      text: "Pacman's n8n skill is top-tier. They built a fast workflow that searches LinkedIn and accurately enriches HR contacts for our pipeline. An exceptional solution that immediately added value to our business."
     },
     {
-      name: "Emily Rodriguez",
-      title: "Marketing Director, ScaleUp Inc",
-      image: "/images/testimonials/upwork.jpg",
-      text: "The AI personalization is incredible. Our reply rates jumped from 3% to 18% because every message feels hand-written. Game changer for our outbound."
+      name: "Helen Kenny",
+      title: "Freelancer",
+      image: "/images/testimonials/kenny.png",
+      text: "As a busy solo freelancer, my client onboarding was entirely manual and was always taking away precious time needed for my work. I met Pacman by chance but he changed my entire business structure with his workflow, he didn't just automate the tasks, he also built a robust and low-maintainance system integrating warm leads from linkedin and reddit into my CRM. I would highly recommend any freelancer looking to professionalize and maximize their time. "
     }
   ]
 
-  // Auto-scroll every 5 seconds
+  // Auto-scroll every few seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => 
         prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
       )
-    }, 7000)
+    }, 9000)
 
     return () => clearInterval(timer)
   }, [testimonials.length])
@@ -53,9 +53,6 @@ export default function Testimonials() {
           <h3 className="text-2xl font-semibold font-poppins text-foreground mb-4">
             What Clients Say
           </h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Real results from businesses that automated their lead generation
-          </p>
         </motion.div>
 
         {/* Testimonial Carousel */}
