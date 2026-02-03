@@ -11,7 +11,7 @@ export default function About() {
     {
       icon: Award,
       title: "Tested & Proven Workflow systems",
-      description: "50+ businesses automated successfully",
+      description: "15+ businesses automated successfully",
     },
     {
       icon: Clock,
@@ -44,8 +44,7 @@ export default function About() {
             Your Growth Partner, Not Just a Developer
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            I build lead generation workflows and automation systems that work while you sleep so you can focus on 
-            closing deals, not chasing them.
+            I build lead generation workflows & automation systems that save time, boost revenue, and work around the clock so that you can focus on closing deals, not chasing them.
           </p>
         </motion.div>
 

@@ -131,8 +131,7 @@ export default function Contact() {
             <div>
               <h3 className="text-2xl font-semibold font-poppins text-foreground mb-6">Let's Start a Conversation</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Maybe its a simple data extraction script or you want a complex automation workflow.
-                Every project starts with understanding your unique challenges and goals.
+                Every project is different and it starts with understanding your unique challenges and goals.
               </p>
             </div>
 

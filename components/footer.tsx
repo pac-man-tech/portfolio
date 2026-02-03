@@ -43,7 +43,7 @@ export default function Footer() {
     },
     {
       icon: Mail,
-      href: "mailto:victor.pacmantech@gmail.com",
+      href: "mailto:pacman.tech@outlook.com",
       label: "Email",
     },
   ]
@@ -144,7 +144,7 @@ export default function Footer() {
               viewport={{ once: true }}
               className="flex items-center text-sm text-muted-foreground mb-4 md:mb-0"
             >
-              <span>© 2025 Pacman Tech Solutions. Made with</span>
+              <span>© 2026 Pacman Tech Solutions. Made with</span>
               <Heart className="h-4 w-4 text-primary mx-1 fill-current" />
               <span>for growth-focused businesses.</span>
             </motion.div>

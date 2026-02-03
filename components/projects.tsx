@@ -92,7 +92,7 @@ export default function Projects() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-foreground mb-4">
-            Real Results, Real Revenue
+            Some of My Projects
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty mb-8">
             See how I've helped businesses capture more leads, eliminate bottlenecks, and reclaim hundreds of hours 
